@@ -14,7 +14,6 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var answer: UILabel!
 	
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		configure()
@@ -29,7 +28,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	
 	private func configure() {
 		//load the nib
-	Bundle.main.loadNibNamed("QuestionCollectionViewCell", owner: self, options: nil)
+		Bundle.main.loadNibNamed("QuestionCollectionViewCell", owner: self, options: nil)
 		
 		addSubview(contentView)
 		childView.frame = contentView.frame
