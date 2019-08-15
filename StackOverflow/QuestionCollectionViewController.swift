@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class QuestionCollectionViewController: UICollectionViewController {
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		
 	}
-
-
 }
-
