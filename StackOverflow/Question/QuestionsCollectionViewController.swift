@@ -12,11 +12,15 @@ private let reuseIdentifier = "cell"
 
 class QuestionsCollectionViewController: UICollectionViewController {
 	
+	var layout: CollectionViewLayoutModel!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		collectionView.delegate = self
 		collectionView.dataSource = self
+		
+		layout = CollectionViewLayoutModel(view: collectionView, sectionInsets: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8), itemsPerRow: 1, minimumLineSpacing: 16)
 		
 		collectionView.register(QuestionCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 		
@@ -45,3 +49,17 @@ extension QuestionsCollectionViewController {
 	}
 	
 }
+
+//MARK: Delegate Flow Layout
+extension QuestionsCollectionViewController: UICollectionViewDelegateFlowLayout {
+	
+	internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return layout.sectionInsets
+	}
+	
+	internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: layout.size.width, height: 100)
+	}
+	
+}
+

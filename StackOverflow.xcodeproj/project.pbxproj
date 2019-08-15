@@ -17,6 +17,7 @@
 		D8D96F1B23061DF1003EC7C6 /* StackOverflowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F1A23061DF1003EC7C6 /* StackOverflowUITests.swift */; };
 		D8D96F2B23061F7C003EC7C6 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */; };
 		D8D96F2D23061FA7003EC7C6 /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */; };
+		D8D96F2F230622E9003EC7C6 /* CollectionViewLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D8D96F1C23061DF1003EC7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D96F0623061DF0003EC7C6 /* Info.plist */,
+				D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */,
 				D8D96F2923061F5B003EC7C6 /* Question */,
 				D8D96F2823061EA4003EC7C6 /* System */,
 			);
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D96F2F230622E9003EC7C6 /* CollectionViewLayoutModel.swift in Sources */,
 				D8D96F2B23061F7C003EC7C6 /* QuestionCollectionViewCell.swift in Sources */,
 				D8D96EFA23061DEF003EC7C6 /* QuestionsCollectionViewController.swift in Sources */,
 				D8D96F0023061DEF003EC7C6 /* StackOverflow.xcdatamodeld in Sources */,
