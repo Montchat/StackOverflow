@@ -16,5 +16,7 @@ class QuestionCollectionViewController: UICollectionViewController {
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		
+		print("view did load")
+		
 	}
 }
