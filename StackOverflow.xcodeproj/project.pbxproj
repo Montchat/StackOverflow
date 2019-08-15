@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D8D96EF823061DEF003EC7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96EF723061DEF003EC7C6 /* AppDelegate.swift */; };
-		D8D96EFA23061DEF003EC7C6 /* QuestionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96EF923061DEF003EC7C6 /* QuestionCollectionViewController.swift */; };
+		D8D96EFA23061DEF003EC7C6 /* QuestionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96EF923061DEF003EC7C6 /* QuestionsCollectionViewController.swift */; };
 		D8D96EFD23061DEF003EC7C6 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D96EFB23061DEF003EC7C6 /* Question.storyboard */; };
 		D8D96F0023061DEF003EC7C6 /* StackOverflow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D96EFE23061DEF003EC7C6 /* StackOverflow.xcdatamodeld */; };
 		D8D96F0223061DF0003EC7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D96F0123061DF0003EC7C6 /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		D8D96EF423061DEF003EC7C6 /* StackOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D96EF723061DEF003EC7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8D96EF923061DEF003EC7C6 /* QuestionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewController.swift; sourceTree = "<group>"; };
+		D8D96EF923061DEF003EC7C6 /* QuestionsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCollectionViewController.swift; sourceTree = "<group>"; };
 		D8D96EFC23061DEF003EC7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Question.storyboard; sourceTree = "<group>"; };
 		D8D96EFF23061DEF003EC7C6 /* StackOverflow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StackOverflow.xcdatamodel; sourceTree = "<group>"; };
 		D8D96F0123061DF0003EC7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		D8D96F2923061F5B003EC7C6 /* Question */ = {
 			isa = PBXGroup;
 			children = (
-				D8D96EF923061DEF003EC7C6 /* QuestionCollectionViewController.swift */,
+				D8D96EF923061DEF003EC7C6 /* QuestionsCollectionViewController.swift */,
 				D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */,
 				D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */,
 				D8D96EFB23061DEF003EC7C6 /* Question.storyboard */,
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D96F2B23061F7C003EC7C6 /* QuestionCollectionViewCell.swift in Sources */,
-				D8D96EFA23061DEF003EC7C6 /* QuestionCollectionViewController.swift in Sources */,
+				D8D96EFA23061DEF003EC7C6 /* QuestionsCollectionViewController.swift in Sources */,
 				D8D96F0023061DEF003EC7C6 /* StackOverflow.xcdatamodeld in Sources */,
 				D8D96EF823061DEF003EC7C6 /* AppDelegate.swift in Sources */,
 			);
