@@ -97,7 +97,7 @@ extension QuestionsCollectionViewController: UICollectionViewDelegateFlowLayout 
 		
 		let rectangle: CGRect = attributedString.boundingRect(with: CGSize(width: collectionView.bounds.size.width, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
 		
-		rect = CGSize(width: layout.size.width, height: rectangle.size.height + 65)
+		rect = CGSize(width: layout.size.width, height: rectangle.size.height + 75)
 		
 		return rect
 	}

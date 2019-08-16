@@ -52,7 +52,9 @@ struct Question: Codable {
 	
 	var timeStampText: String {
 		let result: String
-		result = "answered five minutes ago"
+		let double = Double(creationDate ?? 0)
+		let date = Date(timeIntervalSince1970: double)
+		result = date.dateString
 		return result
 		
 	}
@@ -104,3 +106,34 @@ extension String {
 	}
 }
 
+extension Date {
+	
+	var dateString: String {
+		
+		let string: String
+		
+		let dayTimePeriodFormatter = DateFormatter()
+		
+		let minute:TimeInterval = -60.0
+		let hour:TimeInterval = 60.0 * minute
+		let day:TimeInterval = 24 * hour
+		
+		if timeIntervalSinceNow >= day * 2 {
+			dayTimePeriodFormatter.dateFormat = "hh:mm a"
+			
+		} else {
+			dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
+			
+		}
+		
+		if timeIntervalSinceNow < day && timeIntervalSinceNow > day * 2 {
+			string = "Yesterday, \(dayTimePeriodFormatter.string(from: self))"
+		} else {
+			string = dayTimePeriodFormatter.string(from: self)
+		}
+		
+		return string
+		
+	}
+	
+}
