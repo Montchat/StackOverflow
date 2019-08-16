@@ -30,18 +30,38 @@ struct Server {
 extension Server {
 	
 	var components: URLComponents {
-		var result: URLComponents = URLComponents(url: questions, resolvingAgainstBaseURL: false)!
+		var result: URLComponents = URLComponents(url: search, resolvingAgainstBaseURL: false)!
 		result.queryItems = queryItems
 		return result
 		
 	}
 	
 	var queryItems: [URLQueryItem] {
-		return [stackoverflow, keyItem]
+		return [stackoverflow, keyItem, accepted, order, sort, answers]
 	}
 	
-	private var questions: URL {
-		return host.appendingPathComponent("/questions/")
+	private var accepted: URLQueryItem {
+		return URLQueryItem(name: "accepted", value: "true")
+	}
+	
+	private var min: URLQueryItem {
+		return URLQueryItem(name: "min", value: "1")
+	}
+	
+	private var order: URLQueryItem {
+		return URLQueryItem(name: "order", value: "desc")
+	}
+	
+	private var sort: URLQueryItem {
+		return URLQueryItem(name: "sort", value: "creation")
+	}
+	
+	private var answers: URLQueryItem {
+		return URLQueryItem(name: "answers", value: "2")
+	}
+	
+	private var search: URL {
+		return host.appendingPathComponent("/search/advanced")
 	}
 	
 	
