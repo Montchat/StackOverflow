@@ -19,6 +19,7 @@ struct Question: Codable {
 	
 	let answerCount: Int?
 	let creationDate: Int?
+	let lastActivityDate: Int?
 	let isAnswered: Bool?
 	let title: String?
 	let url: String?
@@ -49,6 +50,13 @@ struct Question: Codable {
 		return result
 	}
 	
+	var timeStampText: String {
+		let result: String
+		result = "answered five minutes ago"
+		return result
+		
+	}
+	
 }
 
 fileprivate extension Questions {
@@ -66,6 +74,7 @@ fileprivate extension Question {
 		case answerCount = "answer_count"
 		case creationDate = "creation_date"
 		case isAnswered = "is_answered"
+		case lastActivityDate = "last_activity_date"
 		case title
 		case url = "link"
 	}

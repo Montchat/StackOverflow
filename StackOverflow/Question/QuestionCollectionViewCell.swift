@@ -14,6 +14,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var answer: UILabel!
 	
+	@IBOutlet weak var timeStamp: UILabel!
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		configure()
@@ -29,6 +30,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	internal func configure(withQuestion question: Question) {
 		self.question.text = question.titleText
 		self.answer.text = question.answerCountText
+		self.timeStamp.text = question.timeStampText
 		
 	}
 	
