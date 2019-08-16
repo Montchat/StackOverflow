@@ -12,6 +12,7 @@ private let reuseIdentifier = "cell"
 
 class QuestionsCollectionViewController: UICollectionViewController {
 	
+	var model: QuestionsModel!
 	var layout: CollectionViewLayoutModel!
 	
 	override func viewDidLoad() {
@@ -19,6 +20,9 @@ class QuestionsCollectionViewController: UICollectionViewController {
 		
 		collectionView.delegate = self
 		collectionView.dataSource = self
+		
+		let question = Question(question: "test question", answer: "test answer", id: "123")
+		model = QuestionsModel(questions: [question, question, question])
 		
 		layout = CollectionViewLayoutModel(view: collectionView, sectionInsets: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8), itemsPerRow: 1, minimumLineSpacing: 16)
 		
@@ -29,6 +33,14 @@ class QuestionsCollectionViewController: UICollectionViewController {
 
 //MARK: Collection View Delegate
 extension QuestionsCollectionViewController {
+	
+	override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+		return true
+	}
+	
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		print("tapped")
+	}
 	
 }
 

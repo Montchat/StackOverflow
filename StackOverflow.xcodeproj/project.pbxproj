@@ -18,6 +18,8 @@
 		D8D96F2B23061F7C003EC7C6 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */; };
 		D8D96F2D23061FA7003EC7C6 /* QuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */; };
 		D8D96F2F230622E9003EC7C6 /* CollectionViewLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */; };
+		D8D96F31230624B6003EC7C6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F30230624B6003EC7C6 /* Question.swift */; };
+		D8D96F3423062533003EC7C6 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F3323062533003EC7C6 /* QuestionsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCollectionViewCell.xib; sourceTree = "<group>"; };
 		D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutModel.swift; sourceTree = "<group>"; };
+		D8D96F30230624B6003EC7C6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D8D96F3323062533003EC7C6 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +109,10 @@
 		D8D96EF623061DEF003EC7C6 /* StackOverflow */ = {
 			isa = PBXGroup;
 			children = (
-				D8D96F0623061DF0003EC7C6 /* Info.plist */,
-				D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */,
+				D8D96F32230624C4003EC7C6 /* Models */,
 				D8D96F2923061F5B003EC7C6 /* Question */,
 				D8D96F2823061EA4003EC7C6 /* System */,
+				D8D96F0623061DF0003EC7C6 /* Info.plist */,
 			);
 			path = StackOverflow;
 			sourceTree = "<group>";
@@ -146,11 +150,21 @@
 			isa = PBXGroup;
 			children = (
 				D8D96EF923061DEF003EC7C6 /* QuestionsCollectionViewController.swift */,
+				D8D96F3323062533003EC7C6 /* QuestionsModel.swift */,
 				D8D96F2A23061F7C003EC7C6 /* QuestionCollectionViewCell.swift */,
 				D8D96F2C23061FA7003EC7C6 /* QuestionCollectionViewCell.xib */,
 				D8D96EFB23061DEF003EC7C6 /* Question.storyboard */,
 			);
 			path = Question;
+			sourceTree = "<group>";
+		};
+		D8D96F32230624C4003EC7C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */,
+				D8D96F30230624B6003EC7C6 /* Question.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +300,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D96F2F230622E9003EC7C6 /* CollectionViewLayoutModel.swift in Sources */,
+				D8D96F3423062533003EC7C6 /* QuestionsModel.swift in Sources */,
 				D8D96F2B23061F7C003EC7C6 /* QuestionCollectionViewCell.swift in Sources */,
 				D8D96EFA23061DEF003EC7C6 /* QuestionsCollectionViewController.swift in Sources */,
+				D8D96F31230624B6003EC7C6 /* Question.swift in Sources */,
 				D8D96F0023061DEF003EC7C6 /* StackOverflow.xcdatamodeld in Sources */,
 				D8D96EF823061DEF003EC7C6 /* AppDelegate.swift in Sources */,
 			);
