@@ -75,6 +75,19 @@ struct Question: Codable {
 		return owner?.name ?? ""
 	}
 	
+	var isAnsweredImage: UIImage? {
+		let result: UIImage?
+		switch isAnswered {
+		case true:
+			result = UIImage(named: "accepted")
+		default:
+			result = nil
+		}
+		
+		return result
+		
+	}
+	
 }
 
 struct Owner: Codable {

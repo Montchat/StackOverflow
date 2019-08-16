@@ -17,6 +17,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var timeStamp: UILabel!
 	@IBOutlet weak var reputation: UILabel!
 	@IBOutlet weak var owner: UILabel!
+	@IBOutlet weak var isAnswered: UIImageView!
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -36,6 +37,7 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 		self.reputation.text = question.reputationText
 		self.owner.text = question.ownerText
 		self.timeStamp.text = question.timeStampText
+		self.isAnswered.image = question.isAnsweredImage
 		
 	}
 	
