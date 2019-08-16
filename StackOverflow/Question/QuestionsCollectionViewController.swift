@@ -129,6 +129,8 @@ extension QuestionsCollectionViewController {
 			}
 			
 			do {
+				let json = try? JSONSerialization.jsonObject(with: data, options: [])
+				print("json", json)
 				
 				let decoder = JSONDecoder()
 				let decodedData = try decoder.decode(Questions.self, from: data)
