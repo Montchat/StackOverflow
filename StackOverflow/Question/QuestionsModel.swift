@@ -13,4 +13,10 @@ struct QuestionsModel {
 	let title: String = "Stack Overflow"
 	var questions: [Question]
 	
+	var downloadTask: URLSessionTask?
+	
+	var server: Server {
+		return Environment.shared.server
+	}
+	
 }

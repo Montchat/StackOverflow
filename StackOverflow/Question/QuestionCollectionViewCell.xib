@@ -15,38 +15,48 @@
                 <outlet property="answer" destination="ebv-OJ-Cf4" id="lsM-vt-xYJ"/>
                 <outlet property="childView" destination="iN0-l3-epB" id="9xj-RN-Fki"/>
                 <outlet property="question" destination="cn4-Fg-9ca" id="QE7-a6-66P"/>
+                <outlet property="timeStamp" destination="1x9-Lk-GeC" id="Lxp-kt-Rl8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="141"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn4-Fg-9ca">
-                    <rect key="frame" x="28" y="52" width="358" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="28" y="52" width="358" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-OJ-Cf4">
-                    <rect key="frame" x="28" y="73" width="358" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="28" y="70" width="358" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x9-Lk-GeC">
+                    <rect key="frame" x="362" y="151" width="24" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1x9-Lk-GeC" secondAttribute="bottom" constant="8" id="3Qt-O8-zzz"/>
                 <constraint firstItem="cn4-Fg-9ca" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="8" id="BbI-sO-kGD"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="top" secondItem="cn4-Fg-9ca" secondAttribute="bottom" id="FVv-wl-Jcn"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="trailing" secondItem="cn4-Fg-9ca" secondAttribute="trailing" id="JsD-BQ-why"/>
+                <constraint firstItem="1x9-Lk-GeC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ebv-OJ-Cf4" secondAttribute="bottom" constant="8" id="Txp-mo-p9w"/>
                 <constraint firstItem="cn4-Fg-9ca" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="8" id="Z1j-C9-HTT"/>
+                <constraint firstItem="1x9-Lk-GeC" firstAttribute="trailing" secondItem="cn4-Fg-9ca" secondAttribute="trailing" id="saA-j0-ou3"/>
                 <constraint firstAttribute="trailingMargin" secondItem="cn4-Fg-9ca" secondAttribute="trailing" constant="8" id="vJQ-Ft-bIF"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="leading" secondItem="cn4-Fg-9ca" secondAttribute="leading" id="xL5-AE-q8P"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="121.73913043478262" y="-139.62053571428569"/>
+            <point key="canvasLocation" x="121.73913043478262" y="-118.19196428571428"/>
         </view>
     </objects>
 </document>
