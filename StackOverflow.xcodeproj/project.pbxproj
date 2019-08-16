@@ -20,6 +20,7 @@
 		D8D96F2F230622E9003EC7C6 /* CollectionViewLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */; };
 		D8D96F31230624B6003EC7C6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F30230624B6003EC7C6 /* Question.swift */; };
 		D8D96F3423062533003EC7C6 /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F3323062533003EC7C6 /* QuestionsModel.swift */; };
+		D8D96F3823062F28003EC7C6 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D96F3723062F28003EC7C6 /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D8D96F2E230622E9003EC7C6 /* CollectionViewLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutModel.swift; sourceTree = "<group>"; };
 		D8D96F30230624B6003EC7C6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		D8D96F3323062533003EC7C6 /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
+		D8D96F3723062F28003EC7C6 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D96EF723061DEF003EC7C6 /* AppDelegate.swift */,
+				D8D96F3723062F28003EC7C6 /* Server.swift */,
 				D8D96F0123061DF0003EC7C6 /* Assets.xcassets */,
 				D8D96F0323061DF0003EC7C6 /* LaunchScreen.storyboard */,
 				D8D96EFE23061DEF003EC7C6 /* StackOverflow.xcdatamodeld */,
@@ -305,6 +308,7 @@
 				D8D96EFA23061DEF003EC7C6 /* QuestionsCollectionViewController.swift in Sources */,
 				D8D96F31230624B6003EC7C6 /* Question.swift in Sources */,
 				D8D96F0023061DEF003EC7C6 /* StackOverflow.xcdatamodeld in Sources */,
+				D8D96F3823062F28003EC7C6 /* Server.swift in Sources */,
 				D8D96EF823061DEF003EC7C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
