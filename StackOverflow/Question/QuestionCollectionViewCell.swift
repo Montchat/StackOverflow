@@ -27,8 +27,8 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	}
 	
 	internal func configure(withQuestion question: Question) {
-		self.question.text = question.question
-		self.answer.text = question.answer
+		self.question.text = question.titleText
+		self.answer.text = question.answerCountText
 		
 	}
 	
@@ -49,6 +49,8 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 		contentView.layer.cornerRadius = 3
 		contentView.layer.borderWidth = 0.33
 		contentView.layer.shadowColor = UIColor.black.cgColor
+		
+		question.numberOfLines = 0
 		
 	}
 	

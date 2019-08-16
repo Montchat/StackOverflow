@@ -88,7 +88,18 @@ extension QuestionsCollectionViewController: UICollectionViewDelegateFlowLayout 
 	}
 	
 	internal func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: layout.size.width, height: 100)
+		let questionText = model.questions[indexPath.row].title ?? ""
+		
+		let rect: CGSize
+		
+		let attributedString: NSAttributedString
+		attributedString = NSAttributedString(string: questionText, attributes: [NSAttributedString.Key.font: UIFont.question])
+		
+		let rectangle: CGRect = attributedString.boundingRect(with: CGSize(width: collectionView.bounds.size.width, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, context: nil)
+		
+		rect = CGSize(width: layout.size.width, height: rectangle.size.height + 60)
+		
+		return rect
 	}
 	
 }
@@ -118,10 +129,12 @@ extension QuestionsCollectionViewController {
 			}
 			
 			do {
-				//TODO: JSON Decoding
 				
 				let json = try? JSONSerialization.jsonObject(with: data, options: [])
 				print("json", json)
+				let decoder = JSONDecoder()
+				let decodedData = try decoder.decode(Questions.self, from: data)
+				model.questions = decodedData.questions
 				
 			} catch {
 				print("Error: \(error.localizedDescription)")
@@ -129,8 +142,7 @@ extension QuestionsCollectionViewController {
 			}
 			
 			DispatchQueue.main.async {
-				//TODO: Configure again after updating and adding the questions
-				//self.configure(withModel: model)
+				self.configure(withModel: model)
 			}
 		}
 		
@@ -138,5 +150,12 @@ extension QuestionsCollectionViewController {
 		model.downloadTask = task
 		
 	}
+	
+}
+
+
+extension UIFont {
+	
+	static var question: UIFont { return UIFont.systemFont(ofSize: 15) }
 	
 }
