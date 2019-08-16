@@ -21,8 +21,7 @@ class QuestionsCollectionViewController: UICollectionViewController {
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		
-		let question = Question(question: "test question", answer: "test answer", id: "123")
-		model = QuestionsModel(questions: [question, question, question])
+		model = QuestionsModel(questions: [], downloadTask: nil)
 		
 		layout = CollectionViewLayoutModel(view: collectionView, sectionInsets: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8), itemsPerRow: 1, minimumLineSpacing: 16)
 		
@@ -40,7 +39,7 @@ extension QuestionsCollectionViewController {
 		self.model = model
 		
 		if model.questions.isEmpty {
-			//TODO: Get questions
+			questionURLRequest(withModel: model)
 		}
 		
 		collectionView.reloadData()
@@ -94,3 +93,50 @@ extension QuestionsCollectionViewController: UICollectionViewDelegateFlowLayout 
 	
 }
 
+//MARK URLRequest
+extension QuestionsCollectionViewController {
+	
+	fileprivate func questionURLRequest(withModel model: QuestionsModel) {
+		var model = model
+		
+		if model.downloadTask?.progress.isCancellable ?? false {
+			model.downloadTask?.cancel()
+		}
+		
+		let url = model.server.components.url!
+		
+		let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+			
+			guard error == nil else {
+				print("Error: \(error!.localizedDescription)")
+				return
+			}
+			
+			guard let data = data else {
+				print("Error: \(error!.localizedDescription)")
+				return
+			}
+			
+			do {
+				//TODO: JSON Decoding
+				
+				let json = try? JSONSerialization.jsonObject(with: data, options: [])
+				print("json", json)
+				
+			} catch {
+				print("Error: \(error.localizedDescription)")
+				return
+			}
+			
+			DispatchQueue.main.async {
+				//TODO: Configure again after updating and adding the questions
+				//self.configure(withModel: model)
+			}
+		}
+		
+		task.resume()
+		model.downloadTask = task
+		
+	}
+	
+}
