@@ -27,8 +27,26 @@ class QuestionsCollectionViewController: UICollectionViewController {
 		layout = CollectionViewLayoutModel(view: collectionView, sectionInsets: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8), itemsPerRow: 1, minimumLineSpacing: 16)
 		
 		collectionView.register(QuestionCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+		configure(withModel: model)
 		
 	}
+}
+
+//MARK: Configure method
+extension QuestionsCollectionViewController {
+	
+	internal func configure(withModel model: QuestionsModel) {
+		title = model.title
+		self.model = model
+		
+		if model.questions.isEmpty {
+			//TODO: Get questions
+		}
+		
+		collectionView.reloadData()
+		
+	}
+	
 }
 
 //MARK: Collection View Delegate
