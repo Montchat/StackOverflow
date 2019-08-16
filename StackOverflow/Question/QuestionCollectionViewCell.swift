@@ -15,6 +15,9 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var answer: UILabel!
 	
 	@IBOutlet weak var timeStamp: UILabel!
+	@IBOutlet weak var reputation: UILabel!
+	@IBOutlet weak var owner: UILabel!
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		configure()
@@ -30,6 +33,8 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 	internal func configure(withQuestion question: Question) {
 		self.question.text = question.titleText
 		self.answer.text = question.answerCountText
+		self.reputation.text = question.reputationText
+		self.owner.text = question.ownerText
 		self.timeStamp.text = question.timeStampText
 		
 	}

@@ -23,7 +23,7 @@ struct Question: Codable {
 	let isAnswered: Bool?
 	let title: String?
 	let url: String?
-	
+	let owner: Owner?
 	
 	var titleText: String {
 		let attributedString = title?.html2AttributedString ?? NSAttributedString(string: "")
@@ -59,6 +59,29 @@ struct Question: Codable {
 		
 	}
 	
+	var reputationText: String {
+		let result: String
+		if let reputation = owner?.reputation {
+			result = "\(reputation)"
+		} else {
+			result = ""
+		}
+		
+		return result
+		
+	}
+	
+	var ownerText: String {
+		return owner?.name ?? ""
+	}
+	
+}
+
+struct Owner: Codable {
+	
+	var name: String
+	var reputation: Int
+	
 }
 
 fileprivate extension Questions {
@@ -77,8 +100,18 @@ fileprivate extension Question {
 		case creationDate = "creation_date"
 		case isAnswered = "is_answered"
 		case lastActivityDate = "last_activity_date"
+		case owner
 		case title
 		case url = "link"
+		
+	}
+	
+}
+
+fileprivate extension Owner {
+	enum CodingKeys: String, CodingKey {
+		case name = "display_name"
+		case reputation
 	}
 	
 }

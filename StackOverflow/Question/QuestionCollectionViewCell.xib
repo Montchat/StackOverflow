@@ -14,7 +14,9 @@
             <connections>
                 <outlet property="answer" destination="ebv-OJ-Cf4" id="lsM-vt-xYJ"/>
                 <outlet property="childView" destination="iN0-l3-epB" id="9xj-RN-Fki"/>
+                <outlet property="owner" destination="7ws-ws-Ie6" id="Jk6-MO-79c"/>
                 <outlet property="question" destination="cn4-Fg-9ca" id="QE7-a6-66P"/>
+                <outlet property="reputation" destination="l6v-dX-ELz" id="LTa-ml-tGS"/>
                 <outlet property="timeStamp" destination="1x9-Lk-GeC" id="Lxp-kt-Rl8"/>
             </connections>
         </placeholder>
@@ -41,15 +43,31 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6v-dX-ELz">
+                    <rect key="frame" x="291" y="151" width="63" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ws-ws-Ie6">
+                    <rect key="frame" x="243" y="151" width="40" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1x9-Lk-GeC" secondAttribute="bottom" constant="8" id="3Qt-O8-zzz"/>
                 <constraint firstItem="cn4-Fg-9ca" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="8" id="BbI-sO-kGD"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="top" secondItem="cn4-Fg-9ca" secondAttribute="bottom" id="FVv-wl-Jcn"/>
+                <constraint firstItem="l6v-dX-ELz" firstAttribute="centerY" secondItem="1x9-Lk-GeC" secondAttribute="centerY" id="J1p-3r-zp7"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="trailing" secondItem="cn4-Fg-9ca" secondAttribute="trailing" id="JsD-BQ-why"/>
+                <constraint firstItem="l6v-dX-ELz" firstAttribute="leading" secondItem="7ws-ws-Ie6" secondAttribute="trailing" constant="8" id="Lje-ey-XVD"/>
                 <constraint firstItem="1x9-Lk-GeC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ebv-OJ-Cf4" secondAttribute="bottom" constant="8" id="Txp-mo-p9w"/>
                 <constraint firstItem="cn4-Fg-9ca" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="8" id="Z1j-C9-HTT"/>
+                <constraint firstItem="7ws-ws-Ie6" firstAttribute="centerY" secondItem="1x9-Lk-GeC" secondAttribute="centerY" id="buV-qF-DEc"/>
+                <constraint firstItem="1x9-Lk-GeC" firstAttribute="leading" secondItem="l6v-dX-ELz" secondAttribute="trailing" constant="8" id="lfe-2B-stl"/>
                 <constraint firstItem="1x9-Lk-GeC" firstAttribute="trailing" secondItem="cn4-Fg-9ca" secondAttribute="trailing" id="saA-j0-ou3"/>
                 <constraint firstAttribute="trailingMargin" secondItem="cn4-Fg-9ca" secondAttribute="trailing" constant="8" id="vJQ-Ft-bIF"/>
                 <constraint firstItem="ebv-OJ-Cf4" firstAttribute="leading" secondItem="cn4-Fg-9ca" secondAttribute="leading" id="xL5-AE-q8P"/>
