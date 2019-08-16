@@ -26,6 +26,12 @@ class QuestionCollectionViewCell: UICollectionViewCell {
 		
 	}
 	
+	internal func configure(withQuestion question: Question) {
+		self.question.text = question.question
+		self.answer.text = question.answer
+		
+	}
+	
 	private func configure() {
 		//load the nib
 		Bundle.main.loadNibNamed("QuestionCollectionViewCell", owner: self, options: nil)
